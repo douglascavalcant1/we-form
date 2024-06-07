@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --default-border: 0.1rem solid rgba(0, 0, 0, 0.082);
+  --default-border-radius: 1.2rem;
+  --default-color-pink: #ff5678;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . ."
+    ". hero . form"
+    ". hero . form"
+    ". . . .";
+  gap: 8.5rem;
+}
+
+/* ------------------------------------- */
+/* Index */
+
+main {
+  grid-area: form;
+}
+
+aside {
+  grid-area: hero;
+}
+
+aside h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 75px;
+
+  text-align: center;
+}
+
+aside span,
+main h2 span {
+  color: var(--default-color-pink);
+}
+
+main {
+  width: 60rem;
+  height: 52rem;
+  border: var(--default-border);
+  padding: 4.4rem 5.7rem;
+  position: relative;
+
+  border-radius: var(--default-border-radius);
+}
+
+main h2 {
+  max-width: 43rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+main .actions {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+main .actions a {
+  background-color: #35e6e9;
+  color: #fff;
+  height: 5.5rem;
+  font-size: 2.4rem;
+  border-radius: var(--default-border-radius);
+  text-decoration: none;
+  margin-top: 5.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .actions a + a {
+  background-color: var(--default-color-pink);
+  margin-top: 4.8rem;
+}
+
+main footer p {
+  font-size: 1.6rem;
+  margin-top: 8rem;
+}
+
+main footer a {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  color: #000;
+}
+
+/* ------------------------------------- */
+/* Cadastro de entidades */
+
+main header {
+  display: flex;
+  align-items: center;
+}
+
+main form label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+main header i {
+  color: var(--default-color-pink);
+  font-size: 2.4rem;
+  gap: 2rem;
+}
+
+main form {
+  margin-top: 1rem;
+}
+
+main form :is(input, select) {
+  width: 489px;
+  height: 5.5rem;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: lowercase;
+
+  background-color: #ffffff;
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+}
+
+main form select {
+  appearance: none;
+}
+
+main form .select-div {
+  position: relative;
+}
+
+main form .select-div::after {
+  z-index: 1;
+  position: absolute;
+  content: "\F229";
+  font-family: bootstrap-icons;
+  font-weight: 400;
+  top: 4.8rem;
+  left: 45rem;
+  color: #35e6e9;
+}
+
+main form .points {
+  position: relative;
+}
+
+main form input + button {
+  position: absolute;
+  right: -3rem;
+  top: calc(2.7rem + 1.3rem);
+
+  background-color: transparent;
+  border: none;
+  color: #35e6e9;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ------------------------------------- */
+/* Entidades Cadastradas */
+
+.entidades {
+  display: inline-block;
+  padding: 2rem;
+  width: 100%;
+}
+
+.instituto {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instituto h2 {
+  font-size: 2rem;
+  max-width: 25rem;
+}
+
+.instituto span {
+  padding: 1rem;
+  border: 1px solid #35e6e9;
+  color: #35e6e9;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.instituto a {
+  color: var(--default-color-pink);
+  font-weight: 600;
+}
+
+/* ------------------------------------- */
+/* Campo atuação */
+
+.option {
+  display: block;
+  text-align: center;
+}
+
+.option span {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.option p {
+  font-size: 2rem;
+  color: var(--default-color-pink);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
